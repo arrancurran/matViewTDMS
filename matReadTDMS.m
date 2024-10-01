@@ -1,7 +1,17 @@
-% Read a TDMS file created by Tweezertron
+% Read a TDMS file created by Tweezertron.
+% Requires the tdms-reader library, when run in a linux/macOS enviroement.
+% 
+% Windows, install the library using the MATLAB Add-Ons.
+% - DSP System Toolbox
+% - Communications Toolbox
+% 
+% Linux/macOS, download the library from GitHub
+% git clone https://github.com/sean-moore3/tdms-reader-matlab
+% Or download the zip file from the GitHub URL
+
 
 % Add the tdms-reader library to your MATLAB path
-addpath( genpath( '/Users/arrancurran/Documents/radboud/software/analysis/matViewTDMS/tdms-reader-matlab/' ) );
+addpath( "/Users/arrancurran/Documents/radboud/software/third party/tdms-reader-matlab/" ) ;
 
 % Experiment name, which should be the name of the dir, the tdms and xml file
 exp_name        = 'Trapped Rasp 2024-09-27' ;
@@ -53,3 +63,4 @@ for p = 1 : stacks
     % otherwise the entire experiment is stored in memory,
     % which is often larger than the local RAM
 end
+
